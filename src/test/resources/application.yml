@@ -1,0 +1,27 @@
+spring:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+
+  datasource:
+    url: jdbc:h2:mem:test;INIT=create domain if not exists jsonb as other;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+authUrl: https://515669.erply.com/api
+productsUrl: https://api-pim-eu.erply.com
+auth:
+  clientCode: 515669
+  username: arturiki@gmail.com
+  password: Erply1234
+  sendContentType: 1
